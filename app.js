@@ -5,6 +5,7 @@ var output=document.querySelector("#i4");
 
 function check(dataItem1,dataItem2)
 {
+    console.log(dataItem1," ",dataItem2)
     var cons
     if((dataItem1 == "") || (dataItem2 == "")){
         alert("Oops something went wrong")
@@ -14,7 +15,7 @@ function check(dataItem1,dataItem2)
         output.innerText=cons;
     }
     else{
-        cons="Your Birthday is not lucky!!!"
+        cons="Your Birthday is lucky!!!"
         output.innerText=cons;
     }}
 }
@@ -26,7 +27,7 @@ function replace(dataItem){
 function clickHandler(){
     var data1=input1.value;
     var data2=input2.value;
-    replace(data1);
+    data1=replace(data1);
     check(data1,data2);
 }
 btn1.addEventListener("click",clickHandler);
