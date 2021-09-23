@@ -6,22 +6,29 @@ var output=document.querySelector("#i4");
 function check(dataItem1,dataItem2)
 {
     console.log(dataItem1," ",dataItem2)
-    var cons
-    if((dataItem1 == "") || (dataItem2 == "")){
-        alert("Oops something went wrong")
+    var sum=0;
+    for(var i=0;i<dataItem1.length;i++)
+    {
+        sum=sum+Number(dataItem1[i]);
     }
-    else{if((dataItem1%dataItem2) == 0){
-        cons="Your Birthday is lucky!!!"
-        output.innerText=cons;
+    console.log(sum);
+    if((dataItem1 == "")||(dataItem2 == ""))
+    {
+        alert("Something went wrong");
     }
     else{
-        cons="Your Birthday is lucky!!!"
-        output.innerText=cons;
-    }}
+        if((sum%dataItem2)==0){
+            output.innerText="Hurray!! your birthday is lucky"
+        }
+        else{
+            output.innerText="Sorry to say your birthday is not lucky";
+        }
+    }
 }
 
 function replace(dataItem){
-    dataItem=dataItem.replaceAll("/","")
+    dataItem=dataItem.replaceAll("-","")
+    return dataItem;
 }
 
 function clickHandler(){
