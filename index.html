@@ -19,23 +19,25 @@
         .c1{
             margin: auto;
             width: 50%;
+            background-color: #FDE68A;
         }
         #i1,#i2{
             text-align: center;
             margin-left: 2rem;
         }
         #i3{
-            margin-left: 3rem;
+            margin-left: 6rem;
         }
         #i4{
             background-color: white;
-        }
-        body{
-            background-color: #FDE68A;
+            margin-left: 1rem;
         }
         img{
             width: 300px;
             height: 300px;
+        }
+        #i5,#i6{
+            margin-left: 2rem;
         }
     </style>
 </head>
@@ -43,12 +45,16 @@
     <div class="c1">
         <h1>Is your birthday lucky</h1>
         <img src="image.svg">
+        <div id="i5">
     <span><h2>Date of Birth</h2></span>
     <span><input type="date" name="begin" placeholder="dd-mm-yyyy" id="i1"></span>
+</div>
 
+<div id="i6">
     <span><h2>Lucky number</h2>
     <span><input type="number" id="i2"></span>
     <br><br>
+</div>
 
     <button id="i3">Check number</button>
     <br><br>
