@@ -14,7 +14,7 @@ function check(dataItem1,dataItem2)
     console.log(sum);
     if((dataItem1 == "")||(dataItem2 == ""))
     {
-        alert("Something went wrong");
+        output.innerText="Something went wrong. Try again";
     }
     else{
         if((sum%dataItem2)==0){
