@@ -12,12 +12,12 @@ function check(dataItem1,dataItem2)
         sum=sum+Number(dataItem1[i]);
     }
     console.log(sum);
-    if((dataItem1 == "")||(dataItem2 == ""))
+    if((dataItem1 == "")||(dataItem2 == "")||(dataItem2 < 0))
     {
         output.innerText="Something went wrong. Try again";
     }
     else{
-        if((sum%dataItem2)==0){
+        if((sum%dataItem2==0)&&(dataItem2>0)){
             output.innerText="Hurray!! your birthday is lucky"
         }
         else{
